@@ -43,12 +43,15 @@ public class App
                     instruments.add(new Drum(manufacturer, price));
                 }
                 else {
-                    System.out.println("Valintaa ei voi tehdä!");
+                    System.out.println("Virheellinen soitinvalinta.");
                     continue;
                 }
                 System.out.println("Soitin lisätty listaan!");
                 break;
             case 2:
+                if (instruments.isEmpty()) {
+                    System.out.println("Ei lisättyjä soittimia.");
+                }
                 for (Instrument instrument : instruments) {
                     System.out.println(instrument.getDetails());
                     }
